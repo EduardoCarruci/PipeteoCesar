@@ -1,0 +1,22 @@
+<div *ngFor="let message of mensajes" class="card card-body mb-2">
+  <div class="row">
+    <div class="col-md-8">
+      <ul>
+        <li>
+          id:{{message.id}}
+        </li>
+        <li>
+          nick:{{message.nick}}
+        </li>
+        <li>
+          mensaje:{{message.mensaje}}
+        </li>
+      </ul>
+      <button class="btn btn-danger" (click)="deleteMensaje(message.id)">Delete</button>
+      <button class="btn btn-secondary" [routerLink]="['/mensajes/edit',message.id]">Edit</button>
+    </div>
+    <div class="col-md-4">
+
+    </div>
+  </div>
+</div>
